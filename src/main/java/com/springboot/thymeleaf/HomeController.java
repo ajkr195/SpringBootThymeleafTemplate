@@ -1,4 +1,4 @@
-package com.springboot.mongodb.imagevideo;
+package com.springboot.thymeleaf;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
