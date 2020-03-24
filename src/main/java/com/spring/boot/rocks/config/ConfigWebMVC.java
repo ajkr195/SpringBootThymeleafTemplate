@@ -1,4 +1,4 @@
-package com.springboot.thymeleaf;
+package com.spring.boot.rocks.config;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-@ComponentScan("com.springboot.mongodb.imagevideo.*")
+@ComponentScan("com.spring.boot.rocks.*")
 public class ConfigWebMVC implements WebMvcConfigurer {
 
 	private static final String[] CLASSPATH_RESOURCE_LOCATIONS = { "classpath:/META-INF/resources/",
@@ -19,8 +19,8 @@ public class ConfigWebMVC implements WebMvcConfigurer {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
-		registry.addResourceHandler("/photos/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
-		registry.addResourceHandler("/videos/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
+		registry.addResourceHandler("/somecontext/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
+		registry.addResourceHandler("/somecontextpath/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
 	}
 
 	@Bean
