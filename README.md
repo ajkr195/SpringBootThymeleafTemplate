@@ -1,2 +1,2 @@
 # SpringBootThymeleafTemplate
-SpringBootThymeleaf Template
+SpringBootThymeleaf Template and Layout Demo
