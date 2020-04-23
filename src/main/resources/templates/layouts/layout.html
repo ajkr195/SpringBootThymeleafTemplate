@@ -5,13 +5,26 @@
 <meta charset="UTF-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title th:text="${metaTitle} ? ${metaTitle} : 'default title'"></title>
 <link rel="stylesheet"
-	href="webjars/bootstrap/4.4.1/css/bootstrap.min.css" />
-<link rel="stylesheet" href="css/main.css" />
+	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+<link rel="stylesheet"
+	th:href="@{/webjars/datatables/css/jquery.dataTables.min.css}">
+<link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}">
+<link th:href="@{/css/main.css}" rel="stylesheet" />
 </head>
 <body>
+
 	<div th:replace="fragments/header :: header"></div>
+
 	<section layout:fragment="content"></section>
+
 	<div th:replace="fragments/footer :: footer"></div>
+
 </body>
+<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/jquery-validation/jquery.validate.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </html>
