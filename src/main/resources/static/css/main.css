@@ -1,84 +1,92 @@
-.dropdown-menu>a:hover {
-	background-color: #33BEFF;
-	text-decoration: none;
+/* background-color: #006699; */
+
+ .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #006699;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 3px solid !important;
+/*     font-size: 16px; */
+    font-weight: bold;
+}
+.nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #0062cc;
+/*     font-size: 16px; */
+/*     font-weight: 600; */
+}
+/*  thead{ */
+/*     background: #f3f3f3; */
+/*     color: #333; */
+/* } */
+.nav-link a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-	/* 	background-color: #33BEFF; */
-	/* 	background-color: #F3F694; */
-/* 	font-weight: bold; */
-}
-
-.table_morecondensed>thead>tr>th, .table_morecondensed>tbody>tr>th,
-	.table_morecondensed>tfoot>tr>th, .table_morecondensed>thead>tr>td,
-	.table_morecondensed>tbody>tr>td, .table_morecondensed>tfoot>tr>td {
-	padding: 1px;
-	font-size: auto;
-}
-
-.btn {
-/* 	border-radius: 0; */
-}
-
-.nav>li>a {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.btn-space {
-	margin-right: 5px;
-	margin-left: 5px;
-	font-size: 12px
-}
-
-.control-label {
-	padding-top: 6px;
-}
-
-.pull-left {
-	margin-left: -20px; /* Try with different values until you are happy */
-}
-
-.error {
-	color: red;
-}
-
-thead {
-	background-color: lightgray;
-	color: black;
-	line-height: 15px;
-	font-weight: bold;
-}
-
-.field_set {
-	margin-top: 5px;
-	border: 2px;
-	  border-color: darkgray;
-	border-style: solid;
-}
-
-legend {
-	font-size: 14px;
-	font-weight: bold;
-	color: blue;
-}
-
-.alert {
-  margin-bottom: 1px;
-  height: 35px;
-  line-height:35px;
-  padding:0px;
+/* when not active use specificity to override the !important on border-(color) */
+.nav-tabs .nav-link:not(.active) {
+    border-color: transparent !important;
 }
 
 .footer {
+	/* 	position: relative; */
 	position: fixed;
 	bottom: 0;
+	left: 0;
 	width: 100%;
 	/* Set the fixed height of the footer here */
-	height: 25px; */
-	line-height: 20px;
-	background-color: #f5f5f5;
+	height: auto; */
+	line-height: auto;
+	/* 	background-color: #f5f5f5; */
 	text-align: center;
+	font-size: 75%;
 }
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.sec{
+    position: relative;
+    right: -13px;
+    top:-22px;
+}
+
+.counter.counter-lg {
+    top: -24px !important;
+}
+
+
+.navbar-badge {
+/* 	font-size: 1.75rem; */
+/* 	font-weight: 300; */
+	padding: 2px 4px;
+	position: absolute;
+	right: 1px;
+	top: 4px;
+}
+
+/* .dropdown:hover > .dropdown-menu { */
+/*     display: block; */
+/* } */
+/* .dropdown > .dropdown-toggle:active { */
+/*     Without this, clicking will make it sticky */
+/*     pointer-events: none; */
+/* } */
+
+/* .dropdown:hover>.dropdown-menu { */
+/*   display: block; */
+/* } */
+
+
+
+
+
+

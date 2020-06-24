@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layouttemp}">
+<head>
+<title>Springboot Rocks</title>
+</head>
+<body id="page-top">
+	<div layout:fragment="content">
+		<div class="container-fluid" id="container-wrapper">
+			<div
+				class="d-sm-flex align-items-center justify-content-between mb-4">
+				<h1 class="h3 mb-0 text-gray-800">Temp Page</h1>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+					<li class="breadcrumb-item">Pages</li>
+					<li class="breadcrumb-item active" aria-current="page">Temp
+						Page</li>
+				</ol>
+			</div>
+			
+			<h4 th:text="#{welcome.text}"></h4>
+
+			<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+				<a class="nav-item nav-link active" id="nav-home-tab"
+					data-toggle="tab" href="#nav-home" role="tab"
+					aria-controls="nav-home" aria-selected="true">Tab 1</a> <a
+					class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+					href="#nav-profile" role="tab" aria-controls="nav-profile"
+					aria-selected="false">Tab 2</a> <a class="nav-item nav-link"
+					id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+					role="tab" aria-controls="nav-contact" aria-selected="false">Tab
+					3</a>
+			</div>
+			<div class="tab-content" id="nav-tabContent">
+				<div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+					aria-labelledby="nav-home-tab">
+					<table class="table" style="width: 100%">
+						<thead>
+							<tr>
+								<th>Project Name</th>
+								<th>Employer</th>
+								<th>Awards</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#">Work 1</a></td>
+								<td>Doe</td>
+								<td>john@example.com</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tab-pane fade" id="nav-profile" role="tabpanel"
+					aria-labelledby="nav-profile-tab">
+					<table class="table" style="width: 100%">
+						<thead>
+							<tr>
+								<th>Different Name</th>
+								<th>FirstName</th>
+								<th>Time</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#">Work 1</a></td>
+								<td>Doe</td>
+								<td>john@example.com</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tab-pane fade" id="nav-contact" role="tabpanel"
+					aria-labelledby="nav-contact-tab">
+					<table class="table" style="width: 100%">
+						<thead>
+							<tr>
+								<th>Contest Name</th>
+								<th>Date</th>
+								<th>Award Position</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#">Work 1</a></td>
+								<td>Doe</td>
+								<td>john@example.com</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+</body>
+</html>

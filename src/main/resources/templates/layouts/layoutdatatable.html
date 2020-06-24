@@ -6,13 +6,12 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title th:text="${metaTitle} ? ${metaTitle} : 'default title'"></title>
-
 <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}">
 <link rel="stylesheet"
 	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
-
-<!-- <link rel="stylesheet" th:href="@{/css/main.css}"> -->
 <link rel="stylesheet" th:href="@{/css/ruang-admin.css}">
+<link rel="stylesheet"
+	th:href="@{/webjars/datatables/css/dataTables.bootstrap4.min.css}" />
 </head>
 <body>
 
@@ -40,18 +39,23 @@
 </body>
 
 <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/datatables/js/jquery.dataTables.min.js}"></script>
 <script type="text/javascript"
 	th:src="@{/webjars/jquery-validation/jquery.validate.min.js}"></script>
 <script type="text/javascript"
 	th:src="@{/webjars/jquery-easing/jquery.easing.min.js}"></script>
-<!-- 	/META-INF/resources/webjars/jquery-easing/1.4.1/jquery.easing.min.js -->
 <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
 <script type="text/javascript"
 	th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 
-<script type="text/javascript"
-	th:src="@{/webjars/chartjs/2.9.3/Chart.min.js}"></script>
-<script type="text/javascript" th:src="@{/js/chart-area-demo.js}"></script>
 <script type="text/javascript" th:src="@{/js/ruang-admin.js}"></script>
-
+<script type="text/javascript"
+	th:src="@{/webjars/datatables/1.10.20/js/dataTables.bootstrap4.min.js}"></script>
+	
+<script>
+    $(document).ready(function () {
+      $('#dataTable').DataTable(); // ID From dataTable 
+      $('#dataTableHover').DataTable(); // ID From dataTable with Hover
+    });
+  </script>
 </html>

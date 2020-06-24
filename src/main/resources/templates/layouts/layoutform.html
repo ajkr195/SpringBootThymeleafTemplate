@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title th:text="${metaTitle} ? ${metaTitle} : 'default title'"></title>
+<link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}">
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+<link rel="stylesheet"
+	th:href="@{/webjars/select2/4.0.13/css/select2.min.css}" />
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css}" />
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap-touchspin/3.1.2/dist/jquery.bootstrap-touchspin.css}" />
+<link rel="stylesheet"
+	th:href="@{/webjars/clockpicker/0.0.7/dist/jquery-clockpicker.css}" />
+
+<!-- <link rel="stylesheet" th:href="@{/css/main.css}"> -->
+<link rel="stylesheet" th:href="@{/css/ruang-admin.css}">
+</head>
+<body>
+
+	<div id="wrapper">
+		<div th:replace="fragments/sidebar :: sidebar"></div>
+		<div id="content-wrapper" class="d-flex flex-column">
+
+			<div th:replace="fragments/header :: header"></div>
+			<div id="content">
+				<section layout:fragment="content"></section>
+			</div>
+
+
+
+			<!-- Scroll to top -->
+			<a class="scroll-to-top rounded" href="#page-top"> <i
+				class="fas fa-angle-up"></i>
+			</a>
+
+			<div th:replace="fragments/logoutconfirm :: logoutconfirm"></div>
+			<div th:replace="fragments/footer :: footer"></div>
+		</div>
+	</div>
+
+</body>
+
+<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/jquery-validation/jquery.validate.min.js}"></script>
+
+
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/jquery-easing/jquery.easing.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/select2/4.0.13/js/select2.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/bootstrap-touchspin/3.1.2/dist/jquery.bootstrap-touchspin.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/clockpicker/0.0.7/dist/jquery-clockpicker.js}"></script>
+
+<script type="text/javascript" th:src="@{/js/ruang-admin.js}"></script>
+<script>
+    $(document).ready(function () {
+      $('.select2-single').select2();
+
+      // Select2 Single  with Placeholder
+      $('.select2-single-placeholder').select2({
+        placeholder: "Select a Province",
+        allowClear: true
+      });      
+
+      // Select2 Multiple
+      $('.select2-multiple').select2();
+
+      // Bootstrap Date Picker
+      $('#simple-date1 .input-group.date').datepicker({
+        format: 'dd/mm/yyyy',
+        todayBtn: 'linked',
+        todayHighlight: true,
+        autoclose: true,        
+      });
+
+      $('#simple-date2 .input-group.date').datepicker({
+        startView: 1,
+        format: 'dd/mm/yyyy',        
+        autoclose: true,     
+        todayHighlight: true,   
+        todayBtn: 'linked',
+      });
+
+      $('#simple-date3 .input-group.date').datepicker({
+        startView: 2,
+        format: 'dd/mm/yyyy',        
+        autoclose: true,     
+        todayHighlight: true,   
+        todayBtn: 'linked',
+      });
+
+      $('#simple-date4 .input-daterange').datepicker({        
+        format: 'dd/mm/yyyy',        
+        autoclose: true,     
+        todayHighlight: true,   
+        todayBtn: 'linked',
+      });    
+
+      // TouchSpin
+
+      $('#touchSpin1').TouchSpin({
+        min: 0,
+        max: 100,                
+        boostat: 5,
+        maxboostedstep: 10,        
+        initval: 0
+      });
+
+      $('#touchSpin2').TouchSpin({
+        min:0,
+        max: 100,
+        decimals: 2,
+        step: 0.1,
+        postfix: '%',
+        initval: 0,
+        boostat: 5,
+        maxboostedstep: 10
+      });
+
+      $('#touchSpin3').TouchSpin({
+        min: 0,
+        max: 100,
+        initval: 0,
+        boostat: 5,
+        maxboostedstep: 10,
+        verticalbuttons: true,
+      });
+
+      $('#clockPicker1').clockpicker({
+        donetext: 'Done'
+      });
+
+      $('#clockPicker2').clockpicker({
+        autoclose: true
+      });
+
+      let input = $('#clockPicker3').clockpicker({
+        autoclose: true,
+        'default': 'now',
+        placement: 'top',
+        align: 'left',
+      });
+
+      $('#check-minutes').click(function(e){        
+        e.stopPropagation();
+        input.clockpicker('show').clockpicker('toggleView', 'minutes');
+      });
+
+    });
+  </script>
+</html>
